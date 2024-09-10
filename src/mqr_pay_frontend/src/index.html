@@ -1,24 +1,685 @@
 <!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>mqr_pay</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
-  </body>
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>MQR Pay - Seamless One-Tap Payments via QR Code on WhatsApp.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Instant QR code payments via WhatsApp with MQR Pay. Fast, secure, and easy transactions in seconds" />
+    <meta name="keywords" content="MQR Pay, QR code payments, WhatsApp payments, instant transactions, secure payments, one-tap payment, fast payment solution" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--srart theme style -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="js/plugin/rs_slider/layers.css" />
+    <link rel="stylesheet" type="text/css" href="js/plugin/rs_slider/navigation.css" />
+    <link rel="stylesheet" type="text/css" href="js/plugin/rs_slider/settings.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <!-- favicon links -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+</head>
+
+<body>
+    <!-- preloader Start -->
+    <div id="preloader">
+        <div id="status"><img src="images/header/mabo-rotating.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+
+
+    <!-- btc top header wrapper Start -->
+    <div class="btc_top_header_main_wrapper">
+        <div class="container-fluid">
+            <div class="btc_left_top_header_wrapper">
+                <p class="btc_topheader_welcome_pera">Welcome to MQR Pay - The Future of Finance</p>
+                <div id="ticker_window">
+                    <div id="day_and_time">
+                        <p id="date" class="hidden-xs"></p>
+                        <p id="clock" class="hidden-xs"></p>
+                        <ul id="ticker">
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="btc_right_top_header_wrapper">
+                <ul>
+                    <li class="btc_topheader_welcome_pera"><i class="flaticon-phone-call"></i> +254 110 699892 </li>
+
+                    <li>
+                        <a id="login4">
+                            <i class="flaticon-profile"></i> 
+                            LOGIN
+                        </a>
+                    </li>
+
+                    <li>
+                        <p><i class="flaticon-internet"></i><span> English <i class="fa fa-angle-down" aria-hidden="true"></i></span></p>
+                        <div class="ss_opener">
+                            <span> English</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- btc top header wrapper End -->
+
+    <!-- Header Wrapper Start -->
+    <div class="gc_main_menu_wrapper">
+        <div class="container-fluid">
+            <div id="search_open" class="gc_search_box">
+                <input type="text" placeholder="Search here">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 hidden-xs">
+                    <div class="gc_header_wrapper">
+                        <div class="gc_logo">
+                            <a href="/"><img src="images/header/logo.png" alt="Logo" title="SakaAI"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                    <div class="header-area hidden-menu-bar stick" id="sticker">
+                        <!-- mainmenu start -->
+
+
+                        <div class="gc_right_menu hidden-xs">
+                            <ul>
+
+                                <li class="btc_join_navi_btn"><a id="login3">Log in</a></li>
+                            </ul>
+                        </div>
+
+
+                        <div class="mainmenu hidden-xs">
+                            <ul>
+                                <li class="gc_main_navigation parent active"><a href="" class="gc_main_navigation">Home</a></li>
+                                <!-- <li class="gc_main_navigation parent"><a href="" class="gc_main_navigation">How It Works</a></li> -->
+                            </ul>
+                        </div>
+                        <!-- mainmenu end -->
+                        <!-- mobile menu area start -->
+                        <div class="rp_mobail_menu_main_wrapper visible-xs">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="gc_logo">
+                                        <a href="/"><img src="images/header/logo.png" alt="Logo" title="SakaAI"></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div id="toggle">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 31.177 31.177" style="enable-background:new 0 0 31.177 31.177;" xml:space="preserve" width="25px" height="25px"><g><g><path class="menubar" d="M30.23,1.775H0.946c-0.489,0-0.887-0.398-0.887-0.888S0.457,0,0.946,0H30.23    c0.49,0,0.888,0.398,0.888,0.888S30.72,1.775,30.23,1.775z" fill="#000000"/></g><g><path class="menubar" d="M30.23,9.126H12.069c-0.49,0-0.888-0.398-0.888-0.888c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,8.729,30.72,9.126,30.23,9.126z" fill="#000000"/></g><g><path class="menubar" d="M30.23,16.477H0.946c-0.489,0-0.887-0.398-0.887-0.888c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,16.079,30.72,16.477,30.23,16.477z" fill="#000000"/></g><g><path class="menubar" d="M30.23,23.826H12.069c-0.49,0-0.888-0.396-0.888-0.887c0-0.49,0.398-0.888,0.888-0.888H30.23    c0.49,0,0.888,0.397,0.888,0.888C31.118,23.43,30.72,23.826,30.23,23.826z" fill="#000000"/></g><g><path class="menubar" d="M30.23,31.177H0.946c-0.489,0-0.887-0.396-0.887-0.887c0-0.49,0.398-0.888,0.887-0.888H30.23    c0.49,0,0.888,0.398,0.888,0.888C31.118,30.78,30.72,31.177,30.23,31.177z" fill="#000000"/></g></g></svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="sidebar">
+                                <h1><a href="/">SakaAI</a></h1>
+                                <div id="toggle_close">&times;</div>
+                                <div id='cssmenu'>
+                                    <ul>
+                                        <li><a href=''>Home</a></li>
+                                        <!-- <li><a href=''>How It Works<</a></li> -->
+                                        <li id="login2"> <a href="">Login</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu area end -->
+            </div>
+        </div>
+    </div>
+    <!-- Header Wrapper End -->
+
+
+
+    <!-- CC slider Wrapper Start -->
+    <div class="btc_main_slider_main_wrapper">
+        <div id="rev_slider_24_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="website-intro" data-source="gallery" style="background:#000000;padding:0px;">
+            <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
+            <div id="rev_slider_24_1" class="rev_slider fullscreenbanner tiny_bullet_slider" style="display:none;" data-version="5.4.1">
+                <ul>
+
+
+                    <!-- SLIDE  -->
+                    <li data-index="rs-67" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="600" data-thumb="../../assets/images/woman2-100x50.jpg" data-rotate="0"
+                        data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="" data-slicey_shadow="0px 0px 0px 0px transparent">
+                        <!-- MAIN IMAGE -->
+                        <img src="images/header/slider_img.jpg" alt="" data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Power2.easeInOut" data-scalestart="100" data-scaleend="150" data-rotatestart="0" data-rotateend="0" data-blurstart="20" data-blurend="0"
+                            data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        <!-- LAYERS -->
+
+
+
+                        <!-- LAYER NR. 14 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper " id="slide-67-layer-1" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" data-width="full" data-height="full"
+                            data-whitespace="nowrap" data-type="shape" data-basealign="slide" data-responsive_offset="off" data-responsive="off" data-frames='[{"delay":10,"speed":500,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":500,"frame":"999","to":"opacity:0;","ease":"Power4.easeOut"}]'
+                            data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 18;background-color:rgba(0, 0, 0, 0.5);">
+                        </div>
+
+                        <!-- LAYER NR. 15 -->
+                        <div class="tp-caption   tp-resizeme btc_slider_left_border" id="slide-68-layer-2" data-x="['left','left','center','center']" data-hoffset="['1','1','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-70','-70','-70','-70']" data-fontsize="['54','54','30','20']"
+                            data-lineheight="['60','60','35','25']" data-width="['none','none','481','360']" data-height="none" data-whitespace="['nowrap','nowrap','normal','normal']" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:0.9;sY:0.9;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"sX:0.9;sY:0.9;opacity:0;fb:20px;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['left','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 19; white-space: nowrap; font-size: 90px; line-height: 90px; font-weight: 500; color: #ffffff; letter-spacing: 1px;font-family: 'Raleway', sans-serif;">MQR Pay </div>
+
+
+                        <!-- LAYER NR. 16 -->
+                        <div class="tp-caption   tp-resizeme " id="slide-69-layer-3" data-x="['left','left','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['50','50','60','30']" data-fontsize="['22','22','22','22']"
+                            data-lineheight="['30','30','30','30']" data-width="['480','480','480','360']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:0.9;sY:0.9;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"sX:0.9;sY:0.9;opacity:0;fb:20px;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['left','left','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 20; min-width: 480px; max-width: 480px; white-space: normal; font-size: 22px; line-height: 30px; font-weight: 400; color: #ffffff; letter-spacing: 0px;font-family: 'Lato', sans-serif;"> 
+                            Seamless One-Tap Payments via QR Code on WhatsApp. 
+                        </div>
+
+                        <!-- LAYER NR. 17 -->
+                        <a class="tp-caption rev-btn  tp-resizeme" id="login" data-x="['left','left','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['150','150','160','120']"
+                            data-width="210" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='' data-responsive_offset="on" data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"sX:0.9;sY:0.9;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"sX:0.9;sY:0.9;opacity:0;fb:20px;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;fb:0;","style":"c:rgba(255,255,255,1);bs:solid;bw:0 0 0 0;"}]'
+                            data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 21; min-width: 210px; max-width: 210px; white-space: nowrap; font-size: 16px; line-height: 50px; font-weight: 900; color: #ffffff; letter-spacing: 2px;font-family: 'Lato', sans-serif;background-color:#22195b;border-radius:30px 30px 30px 30px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;text-decoration: none;text-transform:uppercase;">
+                            Log in 
+                        </a>
+
+                    </li>
+
+
+                    
+
+                </ul>
+                <div class="tp-bannertimer tp-bottom" style="height: 5px; background: rgba(204,204,204,0.5);"></div>
+            </div>
+        </div>
+        <!-- END REVOLUTION SLIDER -->
+    </div>
+    <!-- rs slider Wrapper End -->
+
+
+
+    <div class="btc_video_main_wrapper" id="accept_payment" style="display: none;">
+        <div class="container">
+            <div class="btc_video_left_wrapper">
+                <h1> Balance: 0.02 ETH</h1>
+            </div>
+            <div class="btc_video_right_wrapper">
+                <ul>
+                    <li><a data-toggle="modal" data-target="#myModal">Accept payment</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+   
+
+
+
+
+
+                <!-- ------------------------------------------------------------ -->
+
+
+            </div>
+        </div>
+    </div>
+    <!-- btc blog Category Wrapper End -->
+
+    <!-- btc footer Wrapper Start -->
+    <div class="btc_footer_main_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="btc_footer_logo_left">
+                        <a href="/"><img src="images/header/logo.png" alt="logo"/></a>
+                    </div>
+                    <div class="btc_footer_logo_right">
+                        <p>Seamless One-Tap Payments via QR Code on WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                    <div class="btc_footer_email_wrapper">
+                        <p class="btc_email_footer">Whatsapp Access <br><a href="tel: +254110699892" style="color: rgba(255, 255, 255, 0.7294117647058823);"> +254 110 699892 </a></p>
+                    </div>
+                    <div class="btc_footer_social_wrapper">
+                        <ul>
+                            <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+                            <!-- <li><a href="https://x.com/Sakaai_official" target=”_blank”> <i class="fa fa-twitter"></i></a></li> -->
+                            <!-- <li><a href="https://linkedin.com/company/sakaai" target=”_blank”><i class="fa fa-linkedin"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- btc footer Wrapper End -->
+
+    <!-- btc bottom footer Wrapper Start -->
+    <div class="btc_bottom_footer_main_wrapper">
+        <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;"><span class="fa fa-angle-double-up"></span></a>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="text-center">
+                        <p>© Copyright 2024 by MQR Pay. All Right Reserved</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- btc bottom footer Wrapper End -->
+
+    <div id="currency1" style="display: none;">MQR</div>
+    <div id="ammount3" style="display: none;">22</div>
+    <div id="principal1" style="display: none;">KFOOFHIOFIOUAIO</div>
+
+    
+    <div class="modal fade" tabindex="-1" id="myModal" role="dialog" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+
+            <div class="modal-content" id="success_content" style="display: none;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="confirmModalLabel">Confirm Payment</h4>
+                </div>
+                <div class="modal-body">
+                    <p>You have successfully charged <strong id="ammount2">0.01 ETH</strong> from the QR code.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-lg" id="scanAgain2">Scan Again</button>
+
+                </div>
+            </div>
+
+            <div class="modal-content" id="error_content" style="display: none;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="confirmModalLabel"> Oops! Something Went Wrong </h4>
+                </div>
+                <div class="modal-body">
+                    <p id="custon_error">We're sorry, but we encountered an unexpected error while processing your request.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btn-lg" id="scanAgain">Scan Again</button>
+
+                </div>
+            </div>
+            
+
+            <div class="modal-content text-center" id="processing_content" style="display: none;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="confirmModalLabel">Processing payment</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="processing-payment">
+                        <div id="qr_feedback"></div>
+                        <i class="fa fa-spinner fa-spin" style="font-size: 24px;"></i>
+                        <span style="margin-left: 10px;">Your payment is being processed. Please wait...</span>
+                    </div>
+                </div>
+            </div>
+
+          <div class="modal-content" id="default_modal_content" >
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Scan QR Code: <strong id="ammount1"> 0.001 ETH</strong> </h4>
+            </div>
+
+            <div class="modal-body">
+                <!-- <p class="text-center"> Position the QR code within the frame to scan automatically. </p> -->
+
+                <!-- //results div -->
+                <div id="result" class="text-center" style="display: block;"></div>
+                <div id="send_qr_feedback" class="text-center" style="display: block;"> </div>
+                
+
+                <div id="qr_supported" style="display: block;" class="text-center">
+
+                    <div id="outdiv" width="600" height="600">
+                        <video id="v_test" class="img-responsive img-thumbnail" style="margin-left: auto; margin-right: auto;" width="600" height="600" autoplay controls></video>
+                    </div>
+            
+                    <canvas style="display: none;" id="qr-canvas" width="1600" height="1200"></canvas>
+                </div>
+
+
+            </div>
+
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                    <input type="tel" class="form-control" id="amount" style="border: 2px solid #4169E1;" placeholder="Enter amount">
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    <select class="form-control custom-border" id="currency">
+                                        <option value="eth">ETH</option>
+                                        <option value="btc">BTC</option>
+                                        <option value="usd">USD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: -30px;">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-left">
+                                <div class="btc_contact_btn_wrapper">
+                                    <a href="#">Update amount</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right">
+                                <div class="btc_contact_btn_wrapper">
+                                    <a data-dismiss="modal"> Close </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
+
+
+
+
+
+    <!--main js file start-->
+    <!-- <script src="index.js"></script> -->
+    <script src="js/jquery_min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/bit_timer.js"></script>
+    <script src="js/plugin/rs_slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/plugin/rs_slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.addon.snow.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.actions.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.carousel.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.kenburn.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.migration.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.navigation.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.parallax.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.slideanims.min.js"></script>
+    <script src="js/plugin/rs_slider/revolution.extension.video.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script type="text/javascript" src="custom_assets/llqrcode.js"></script>
+    <script type="text/javascript" src="custom_assets/webqr.js"></script>
+    <!--main js file end-->
+
+
+    <script>
+
+        $('#myModal').on('shown.bs.modal', function () {
+            //$('#myInput').focus();
+            console.log("Opening camera");
+            startCamera();
+
+        })
+
+
+        $('#myModal').on('hidden.bs.modal', function () {
+            console.log('/clossing the camera.');
+            closeCamera();
+        });
+
+        //check if string is empty --- ON TOP
+        function isEmpty(str) {
+            str = str.trim();
+            return (!str || 0 === str.length);
+        }
+
+        //back button clicked
+        const back_button = document.getElementById('scanAgain');
+        back_button.addEventListener('click', function() {
+            revertCamera();
+        });
+
+        const back_button2 = document.getElementById('scanAgain2');
+        back_button2.addEventListener('click', function() {
+            revertCamera();
+        });
+
+        function revertCamera() {
+            //success_content processing_content default_modal_content error_content
+            var a = document.getElementById("success_content");
+            var b = document.getElementById("processing_content");
+            var c = document.getElementById("default_modal_content");
+            var d = document.getElementById("error_content");
+
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display = "block";
+            d.style.display = "none";
+
+            startCamera();
+        }
+
+        //-ON TOP
+        function remove_hash_from_url() {
+            var uri = window.location.toString();
+            if (uri.indexOf("#") > 0) {
+                var clean_uri = uri.substring(0, uri.indexOf("#"));
+                window.history.replaceState({}, document.title, clean_uri);
+            }
+        }
+
+        function postFormData(url = '', data = {}) {
+            const formData = new FormData();
+        
+            for (const key in data) {
+                if (data.hasOwnProperty(key)) {
+                    formData.append(key, data[key]);
+                }
+            }
+        
+            // Use fetch to send the data
+            return fetch(url, {
+                method: 'POST', 
+                body: formData
+            })
+            .then(response => response.text())
+            .catch(error => console.error('Error:', error));
+        }
+
+        // var reqCounter = 0;
+        //web qr function
+        function read(a) {
+            var readResults = htmlEntities(a);
+
+            //process the various authentications and give feedback to the user
+            aLength = a.length;
+            if (aLength == 19) {
+                var reg = new RegExp('^[0-9]+$');
+                if (reg.test(a)) {
+                    //error: not the correct type of QR code
+                    $('#send_qr_feedback').html('Invalid code detected. Please scan a valid MQR Pay code to continue');
+                    window.location.href = "#send_qr_feedback";
+                    remove_hash_from_url();
+                    setwebcam();
+                } else {
+                    //error: not the correct QR code
+                    $('#send_qr_feedback').html('Invalid code detected. Please scan a valid MQR Pay code to continue');
+                    window.location.href = "#send_qr_feedback";
+                    remove_hash_from_url();
+                    setwebcam();
+                }
+
+            } else if (aLength == 32) {
+                //correct length
+                $('#send_qr_feedback').html('');
+
+                closeCamera();
+
+                //Trigger Processing
+                var a = document.getElementById("default_modal_content");
+                var b = document.getElementById("processing_content");
+                a.style.display = "none";
+                b.style.display = "block";
+
+
+                var endpoint1 = 'https://endpoint.emmanuelhaggai.com/qr-pay/';
+                
+                 // Poat data: ammount3 principal1 currency1
+                 const data = {
+                    qr: readResults,
+                    amount: document.getElementById('ammount3').textContent,
+                    from_principal: document.getElementById('principal1').textContent,
+                    currency: document.getElementById('currency1').textContent
+                };
+
+                postFormData(endpoint1, data)
+                    .then(data => {
+                        // console.log('Success:', data); 
+                        // $('#qr_feedback').html(data); //FOR debuging
+
+                        if (data == "111") {
+                            //success
+                            //Trigger Processing
+                            var a = document.getElementById("success_content");
+                            var b = document.getElementById("processing_content");
+                            var c = document.getElementById("error_content");
+                            b.style.display = "none";
+                            a.style.display = "block";
+                            c.style.display = "none";
+                            
+                            //success_content processing_content default_modal_content error_content
+                        } else if (data == "222"){
+                            //error - insufficient balance
+                            var a = document.getElementById("success_content");
+                            var b = document.getElementById("processing_content");
+                            var c = document.getElementById("error_content");
+                            a.style.display = "none";
+                            b.style.display = "none";
+                            c.style.display = "block";
+
+                            //update error message to insufficient balance
+                            $('#custon_error').html('The QR code you scanned does not have enough funds to complete this transaction.');
+
+                        } else if (data == "333") {
+                            // error - invalid qr code, either expired or never exists
+                            var a = document.getElementById("success_content");
+                            var b = document.getElementById("processing_content");
+                            var c = document.getElementById("error_content");
+                            a.style.display = "none";
+                            b.style.display = "none";
+                            c.style.display = "block";
+
+                            //update error message to insufficient balance
+                            $('#custon_error').html('The QR code you scanned is either expired or does not exist.');
+                        } else {
+                            // an error occured
+                            var a = document.getElementById("success_content");
+                            var b = document.getElementById("processing_content");
+                            var c = document.getElementById("error_content");
+                            a.style.display = "none";
+                            b.style.display = "none";
+                            c.style.display = "block";
+
+                            //update error message to insufficient balance
+                            $('#custon_error').html('An error occured, please try again letter.');
+                        }
+
+                    });
+                
+
+
+            } else {
+                //wrong QR code
+                $('#send_qr_feedback').html('Invalid code detected. Please scan a valid MQR Pay code to continue');
+                window.location.href = "#send_qr_feedback";
+                remove_hash_from_url();
+                setwebcam();
+
+            }
+
+        }
+
+
+        function startCamera() {
+
+            //make sure that the camera is visible
+            //Trigger Processing
+            var a = document.getElementById("success_content");
+            var b = document.getElementById("processing_content");
+            var c = document.getElementById("default_modal_content");
+            var d = document.getElementById("error_content");
+
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display = "block";
+            d.style.display = "none";
+
+            if (cameraOn == 0) {
+                $('#send_qr_feedback').html('');
+
+                gCtx = null;
+                gCanvas = null;
+                c = 0;
+                stype = 0;
+                gUM = false;
+                webkit = false;
+                moz = false;
+
+                load();
+
+            } else {
+                //$('#send_qr_feedback').html('You have already started the camera. if it\'s not yet on, click on <b>Stop camera</b> before clicking on <b>Start camera</b>');
+                window.location.href = "#send_qr_feedback";
+                remove_hash_from_url();
+            }
+
+        }
+
+        function closeCamera() {
+
+            cameraOn = 0;
+            v.srcObject.getVideoTracks().forEach(track => track.stop());
+
+            //$('#send_qr_feedback').html('You have successfully closed the camera. Click on <a onclick=\"startCamera()\" class=\"text-primary\"><strong>Start camera</strong></a> to restart it and scan a QR code');
+            $('#outdiv').html('<video id="v_test" class="img-responsive img-thumbnail" style="margin-left: auto; margin-right: auto;" width="600" height="600" autoplay controls></video>');
+            window.location.href = "#send_qr_feedback";
+            remove_hash_from_url();
+
+            gCtx = null;
+            gCanvas = null;
+            c = 0;
+            stype = 0;
+            gUM = false;
+            webkit = false;
+            moz = false;
+        }
+    </script>
+
+</body>
+
 </html>
