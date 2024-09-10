@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "mqr_pay_backend": {
+      "main": "src/mqr_pay_backend/main.mo",
+      "type": "motoko"
+    },
+    "mqr_pay_frontend": {
+      "dependencies": [
+        "mqr_pay_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/mqr_pay_frontend/src/index.html"
+      },
+      "source": [
+        "src/mqr_pay_frontend/assets",
+        "dist/mqr_pay_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
