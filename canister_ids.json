@@ -1,5 +1,8 @@
 {
   "mqr_pay_backend": {
     "ic": "rhxgy-rqaaa-aaaap-qhxoq-cai"
+  },
+  "mqr_pay_frontend": {
+    "ic": "rjvlq-kaaaa-aaaap-qhxpq-cai"
   }
 }

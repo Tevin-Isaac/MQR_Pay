@@ -211,7 +211,7 @@
     <div class="btc_video_main_wrapper" id="accept_payment" style="display: none;">
         <div class="container">
             <div class="btc_video_left_wrapper">
-                <h1> Balance: 0.02 ETH</h1>
+                <h1 id="eth_balance"> Balance: 0.02 ETH</h1> 
             </div>
             <div class="btc_video_right_wrapper">
                 <ul>
@@ -298,7 +298,7 @@
                     <h4 class="modal-title" id="confirmModalLabel">Confirm Payment</h4>
                 </div>
                 <div class="modal-body">
-                    <p>You have successfully charged <strong id="ammount2">0.01 ETH</strong> from the QR code.</p>
+                    <p>You have successfully charged <strong id="ammount2">0.0001 ETH</strong> from the QR code.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default btn-lg pull-left" data-dismiss="modal">Close</button>
@@ -340,7 +340,7 @@
           <div class="modal-content" id="default_modal_content" >
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">Scan QR Code: <strong id="ammount1"> 0.001 ETH</strong> </h4>
+              <h4 class="modal-title">Scan QR Code: <strong id="ammount1"> 0.00001 ETH</strong> </h4>
             </div>
 
             <div class="modal-body">
@@ -369,7 +369,7 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                                    <input type="tel" class="form-control" id="amount" style="border: 2px solid #4169E1;" placeholder="Enter amount">
+                                    <input type="tel" class="form-control" value="0.00001" id="amount" style="border: 2px solid #4169E1;" placeholder="Enter amount">
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                     <select class="form-control custom-border" id="currency">
@@ -571,6 +571,9 @@
                             b.style.display = "none";
                             a.style.display = "block";
                             c.style.display = "none";
+
+                            //update balance + 0.00001 eth_balance = 0.02001 ETH
+                            $('#eth_balance').html("Balance: 0.02001 ETH");
                             
                             //success_content processing_content default_modal_content error_content
                         } else if (data == "222"){

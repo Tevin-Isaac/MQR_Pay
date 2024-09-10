@@ -66,25 +66,6 @@ loginButton.onclick = async (e) => {
 
 
 
-
-
-//-------------
-// document.querySelector("form").addEventListner("submit", async (e) => {
-//   e.PreventDefault();
-//   const button = e.target.
-
-
-// }
-
-// whoAmIButton.onclick = async (e) => {
-//   e.preventDefault();
-//   whoAmIButton.setAttribute("disabled", true);
-//   const principal = await actor.whoami();
-//   whoAmIButton.removeAttribute("disabled");
-//   document.getElementById("principal").innerText = principal.toString();
-//   return false;
-// };
-
 //----------------
 
 // document.querySelector("form").addEventListener("submit", async (e) => {
