@@ -39,9 +39,9 @@ sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/EmmanuelHaggai/SakaAI-on-ICP.git
+   git clone https://github.com/EmmanuelHaggai/MQR_Pay.git
    
-   cd SakaAI-on-ICP
+   cd MQR_Pay
    ```
    
 2. **Install Dependencies:**
