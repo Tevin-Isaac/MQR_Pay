@@ -323,4 +323,10 @@ actor {
         combo;
     };
 
+
+    public func generateNumber() : async Int {
+        let number = Time.now();
+        return number;
+    }
+
 };
